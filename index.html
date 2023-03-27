@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
+
 <head>
     <meta charset="UTF-8"/>
+    <!-- This meta data lets the browser know how to control the page's dimensions and scaling. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
     <title>Dinh's Portfolio</title>
@@ -13,6 +15,7 @@
         <h1 class="name">Dinh Nguyen</h1>
         <nav>
             <ul class="nav-list">
+                <!-- <a> tags with href that points to ids for UI navigation-->
                 <li>
                     <a href="#about-me">About Me</a>
                 </li>
@@ -27,24 +30,25 @@
                 </li>
             </ul>
         </nav>
-
-
     </header>
-
+    <!-- using aria-label allows addition of attribute for background image. -->
     <div class="bg-img" role="img" aria-label="brick wall painted blue">
-
-
+        <img src="./assets/images/avatar.jpg" alt="avatar/photo of webpage author" class="avatar-photo">
+        <p class="sub-title">Building My Future, One Line of Code at a Time</p>
     </div>
-
-    
 
     <main class="main-content">
         <section id="about-me">
             <aside class="left">
-                <h2 >About Me</h2>
+                <!-- the <br> tag allows new line. This allows two word title "About Me" to stack -->
+                <h2>About <br>Me<br></h2>
             </aside>
-            <p class="right p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+            <p class="right p">I am a current student in the UNC coding bootcamp program, focusing on developing my skills 
+                in full stack development. So far, I have gained knowledge in HTML, CSS, Git, and GitHub, which has allowed 
+                me to create and manage websites. As I continue with the program, I am eager to expand my skillset even further, 
+                with upcoming courses in JavaScript, Node.js, React, and MERN Stack. I am passionate about utilizing technology 
+                to solve problems and create user-friendly applications, and I am excited about the opportunities that lie ahead in my 
+                journey as a full stack developer. </p>
         </section>
 
         <section id="work">
@@ -53,32 +57,43 @@
             </aside>
             <section class="right">
                 <section class="apps">
-                    <div class="bgi-sr hover" role="img" aria-label="image of wavy lines">
-                        <p class="sr">Surf Report <br><span class ="spa">MERN Stack</span><br></p>
-                    </div>
-
-                    <div class="bgi-lw" role="img" aria-label="image of LED wall">
-                        <p class="lw">LED Wall <br><span>Node/IoT</span><br></p>
-                    </div>
-                    <div class="bgi-cal" role="img" aria-label="image of a calculator">
-                        <p class="cal">Calculator <br><span>React/JavaScript/CSS</span><br></p>
-                    </div>
-                    <div class="bgi-pp" role="img" aria-label="image of pastel tiles">
-                        <p class="pp">Pastel Puzzels <br><span>MERN Stack</span><br></p>
-                    </div>
-                    <div class="bgi-rb" role="img" aria-label="image of yellow balloons with smiley faces">
-                        <p class="rb">Run Buddy<br><span>HTML/CSS</span><br></p>
-                    </div>
+                    <!-- This <a> tag points to a website. target of _blank will open new tab when link is clicked -->
+                    <a href="https://dinh282.github.io/code-refactor-challenge-1/" target="_blank" class="bgi-sr border-hover first-app">
+                        <div  role="img" aria-label="image of wavy lines">
+                             <p class="sr app-label">Surf Report <br><span class ="span">MERN Stack</span><br></p>
+                        </div>
+                    </a>
+                    <a href="https://google.com" target="_blank" class="bgi-lw app-title border-hover">
+                        <div  role="img" aria-label="image of LED wall">
+                            <p class="lw app-label">LED Wall <br><span class="span">Node/IoT</span><br></p>
+                        </div>
+                    </a>
+                    <a href="https://google.com" target="_blank" class="bgi-cal app-title border-hover">
+                        <div  role="img" aria-label="image of a calculator">
+                            <p class="cal app-label">Calculator <br><span class="span">React/JavaScript/CSS</span><br></p>
+                        </div>
+                    </a>
+                    <a href="https://google.com" target="_blank" class="bgi-pp app-title border-hover">
+                        <div  role="img" aria-label="image of pastel tiles">
+                            <p class="pp app-label">Pastel Puzzels <br><span class="span">MERN Stack</span><br></p>
+                        </div>
+                    </a>    
+                    <a href="https://google.com" target="_blank" class="bgi-rb app-title border-hover">
+                        <div  role="img" aria-label="image of yellow balloons with smiley faces">
+                            <p class="rb app-label">Run Buddy<br><span class="span">HTML/CSS</span><br></p>
+                        </div>
+                    </a> 
                 </section>
             </section>    
         </section>
 
         <section id="contact-me">
             <aside class="left">
-                <h2>Contact Me</h2>
+                <h2>Contact <br>Me<br></h2>
             </aside>
                 <section class="right">
-                <ul class="list">
+                <ul class="contact-list">
+                    <!-- href with tel: and mailto: will open phone app and email app for user -->
                     <li><a href="tel:910-922-0341">910-922-0341</a></li>
                     <li><a href="mailto:nguyen_dinh282@yahoo.com">nguyen_dinh282@yahoo.com</a></li>
                     <li><a href="https://github.com/Dinh282" target="_blank" >GitHub</a></li>

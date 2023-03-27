@@ -1,8 +1,8 @@
-:root{
+:root {
     font-size: 16px;
-    --dark-color:rgb(11, 11, 176); 
+    /* creating varies like --dark-color helps reduce redundant tasks */
+    --dark-color:rgb(11, 11, 135); 
     --light-color:rgb(84, 141, 221); 
-
 }
 
 * {
@@ -11,108 +11,112 @@
 }
 
 body {
-    background-color: #d9dcd6;
+    background-color: #a4a6a1;
 }
 
 a {
     color: white;
 }
 
+/* rem is a CSS unit relative to the font size of an HTML element */
 p {
     font-size: 1rem;
 }
 
-div {
-    width: 48.5%;
-    border: solid var(--light-color);
-    font-size: 2rem;
-    padding-top: 30px;
-    padding-bottom: 15px;
-    
-}
-
 h2 {
-    font-size: 5rem;
-    word-spacing: 100rem;
+    font-size: 4.0rem;
     color: var(--dark-color);
 }
 
-span {
-    font-size: 18px;
-}
-
-div p {
-    border: solid var(--light-color);
-    width: 200px;
-    background-color: var(--light-color);
-    font-size: 2rem;
-    font-weight: bolder;
-    width: fit-content;
-} 
-
-main section {
+ main section {
     display:flex;
-    width: 100% ;
+    width: 100%;
 }
 
-
+.apps a:link {
+    /* text-decoration of none allows us to remove any styles on the text(underling, bold, etc.) */
+    text-decoration: none;
+}
+/*a:visted is an example of pseudo-class that allows links to display in different ways */
+.apps a:visited {
+    color: var(--dark-color);
+}
 
 .header {
     display: flex;
     justify-content: space-between;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     background-image: linear-gradient(to top left, darkblue, white) ;
     padding: 10px 0px;
     align-items: center;
 }
 
-.header h1{
+.name {
     font-size: 4rem;
     color: var(--dark-color);
     background-color: var(--light-color) ;
     padding-left: 150px;
     padding-right: 20px;
-    
 }
 
 .header nav {
     padding-right: 60px;
 }
 
-.nav-list li{
+.nav-list li {
     display: inline-block;
     margin-left: 15px;
-    text-decoration: underline var(--light-color);
+    text-decoration:underline var(--light-color);
     color: var(--light-color);
     font-size: 1.2rem;
 }
 
+/* border-radius allows corners of the border to be rounded */
+.avatar-photo {
+    border-radius: 70%;
+    margin: 40px;
+    margin-left: 200px;
+    aspect-ratio: 1/1.5;
+}
+
+.sub-title {
+    background-color: white;
+    color: var(--dark-color);
+    text-align: center;
+    height: fit-content;
+    font-size: 2rem;
+    margin-top: 270px;
+    margin-right: 100px; 
+    padding: 20px;
+    border-radius: 20px;
+}
+
 .bg-img {
+    display: flex;
+    justify-content: space-between;
     height: 400px;
     width: 100%;
     margin-bottom: 25px;
-    background: url("../images/bg-img.jpg") center/100%;
+    background: url("../images/bg-img.jpg") center/110%;
 }
 
-.bgi-sr{
+.bgi-sr {
     background: url("../images/sr.jpg") center/100%;
 }
 
-.bgi-lw{
+.bgi-lw {
     background: url("../images/led-wall.jpg") center/100%;
-    background-color: yellow;
 }
 
-.bgi-cal{
+.bgi-cal {
     background: url("../images/calc.jpg") center/100%;
 }
 
-.bgi-pp{
+.bgi-pp {
     background: url("../images/past-puz.jpg") center/100%;
 }
 
-.bgi-rb{
+.bgi-rb { 
     background: url("../images/runbud.jpg") center/100%;
 }
 
@@ -123,7 +127,6 @@ main section {
     margin: 10px 40px;
 }
 
-
 .left {
     width: 25%;
     margin-right: 50px;
@@ -132,111 +135,154 @@ main section {
     padding-right: 15px;
 }
 
-.right{
-    width: 75%;
-    font-size: 40px;
-}
-
-.right.p{
-    color: var(--dark-color);
-}
-
-.list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    list-style: none;
-    font-size: 25px;
-    width: 100%;
-    align-items: center;
-    text-decoration: underline;
-    text-underline-offset: 8px;
-    color: var(--dark-color);
+.right {
+    width: 70%;
+    justify-content: center;
     
 }
 
-.apps{
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px 0px;
-    
+.right.p {
+    color: var(--dark-color);
+    text-indent: 5%;
+    font-size: 30px;
 }
 
-/* .apps div */
-.apps div:first-child{
+.apps {
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.app-title {
+    flex-wrap: wrap;
+    flex: 1 1 45%;
+    border: solid var(--light-color);
+    font-size: 2rem;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    text-align: left;
+}
+
+.app-label{
+    border: solid var(--light-color);
+    width: 200px;
+    background-color: var(--light-color);
+    font-size: 2rem;
+    font-weight: bolder;
+    width: fit-content;
+    line-height: 22px;
+}
+
+/* this :hover selector allows you to select the .border-hover element when yo hover cursor over it. */
+.border-hover:hover {
+    box-shadow:inset 0px 0px 100px 10px  var(--dark-color); 
+    border: solid var(--dark-color);
+}
+
+.first-app {
     width: 100%;
     border:solid var(--light-color);
     font-size: 2rem;
     padding-top: 240px;
     padding-bottom: 30px;
+    text-align: left;
+}
+
+.contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    font-size: 25px;
+    width: 80%;
+    align-items: center;
+    text-underline-offset: 8px;
+    color: var(--dark-color); 
+    gap: 20px;
+}
+
+.span {
+    font-size: 20px;
 }
 
 
-
+/* Media query to rearrange layout once display width is smaller than 992px */
 @media (max-width: 992px) {
 
-    div {
+    a {
         width: 100%;
     }
 
-    h2 {
-        word-spacing: 0;
+    h2 br {
+        display: none;
     }
 
-    main section, header  {
+    main section, .header {
         flex-wrap: wrap;
         overflow: auto;
         text-align: center;
     }
 
-    
-    .apps div:first-child{
+    .first-app {
         margin-top: 20px;
         padding-top: 30px;
         padding-bottom: 15px;
     }
-   
+
+   .app-title {
+        flex: 1 1 100%;
+    }
+
     .left,
     .right,
-    .list li {
+    .contact-list li {
         text-align: left;
-        margin-right: 0;
         margin-top: 10px;
         width:100%;
-        padding-top: 0px;
     }
 
-    .right{
-        margin: 0px 20px;
-    }
-
-    .left{
+    .left {
         border-bottom: thick solid #29627e;
         border-right: none;
-        
+        padding-left:10px;
+        margin-right: 0;
     }
 
-    .header{
-        justify-content: center;
-        
-    }
-
-    
-    .header h1{
+    .header h1 {
         width:  100%;
-        color: darkblue;
-        flex-wrap: nowrap;
-        background-color: lightskyblue ;
         padding: 0;
+    }
 
+    .header {
+        justify-content: center;
+       
+    }
+    .header nav {
+         padding: 0px;
+        
     }
 
     .header nav li{
-        padding-left: 30px;
-        margin: 5px;
+        margin: 10px;
         font-size: 40px;
     }
 
-  }
+    .avatar-photo {
+        min-height: 280px;
+        margin: 0px;
+        padding: 0px;
+    }
 
+    .sub-title {
+        max-width: fit-content;
+        margin: 0px;
+    }
+
+    .bg-img{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+}
  
