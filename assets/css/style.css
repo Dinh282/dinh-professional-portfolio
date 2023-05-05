@@ -120,6 +120,15 @@ h2 {
     background: url("../images/runbud.jpg") center/100%;
 }
 
+.bgi-sports-com {
+    background: url("../images/sports-companion.png") center/100%;
+}
+
+.bgi-weather {
+    background: url("../images/weather.jpg") center/100%;
+}
+
+
 .main-content {
     display: flex;
     flex-direction: column;
