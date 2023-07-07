@@ -129,6 +129,10 @@ h2 {
     background: url("../images/weather.jpg") center/100%;
 }
 
+.bgi-dear-diary {
+    background: url("../images/dear-diary.jpg") center/100%;
+}
+
 
 .main-content {
     display: flex;
